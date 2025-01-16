@@ -1,6 +1,6 @@
 These are the steps to follow to generate the masks for the 150 patients / 1600+ frames. Change every path for your own.
 
-First, create folders called "raw", "pre" and "models" inside of this current "nnunet" folder and run this in the terminal:
+First, create folders called "raw", "pre", "models" and "output" inside of this current "nnunet" folder and run this in the terminal:
 
 set nnUNet_raw=C:\Users\jonfe\Documents\MasterThesis\nnunet\raw
 set nnUNet_preprocessed=C:\Users\jonfe\Documents\MasterThesis\nnunet\pre
