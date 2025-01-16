@@ -10,8 +10,10 @@ This project introduces the use of time-varying topological descriptors along a 
 
 ### Contents
 
-This repository includes the jupyter notebooks used in this thesis.
+This repository includes the jupyter notebooks used in this thesis. For everything to work correctly, the Automated Cardiac Diagnosis Challenge (ACDC) Dataset should be downloaded without changes from https://humanheart-project.creatis.insa-lyon.fr/database/#collection/637218c173e9f0047faa00fb and the nnunet folder should have the contents described in nnunet/nnUNet_README. 
 
-The image_classification_and_tda notebook performs the segmentation 
+The image_classification_and_tda notebook extracts the useful images from each patient of the ACDC Dataset, applies two types of segmentation and calculates their topological descriptors, generating several time series that describe each patient's cardiac cycle. This notebook contains a Trial option which allows its running with no more requirements that what is contained in this repository. The Trial folder contains the ACDC data and the nnunet masks from a single patient.
 
-For this code to work properly, the ACDC Dataset should be downloaded without changes from https://humanheart-project.creatis.insa-lyon.fr/database/#collection/637218c173e9f0047faa00fb and an nnunet folder with the model used for segmentation in the same directory as this notebook. In the Github repository (https://github.com/jonferreras/MasterThesis) there is trial data (just one patient and its segmentation masks) that allows testing of this notebook. The next flag controls the use of either option (False means default use, True means Trial use)
+The classification notebook takes the previous time series and extracts features, performs feature selection and uses machine learning models for multi-class classification. The results, including confusion matrices and ROC Curves, are displayed in the notebook.
+
+The visualization notebook contains most images or graphics present in the report.
