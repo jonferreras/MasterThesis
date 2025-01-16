@@ -1,14 +1,12 @@
-Changing the paths for your own, these are the steps to follow to generate the masks for the 150 patients / 1600+ frames.
+These are the steps to follow to generate the masks for the 150 patients / 1600+ frames. Change every path for your own.
 
-First, the "models" folder should contain the segmentation model inside of a folder called "Dataset_ACDC". The model that we used is not public and it belongs to the BCN-AIM Lab, so we can't provide it here (also because it is 3GB+ heavy).
-
-Then, run this in the terminal:
+First, create folders called "raw", "pre" and "models" inside of this current "nnunet" folder and run this in the terminal:
 
 set nnUNet_raw=C:\Users\jonfe\Documents\MasterThesis\nnunet\raw
 set nnUNet_preprocessed=C:\Users\jonfe\Documents\MasterThesis\nnunet\pre
 set nnUNet_results=C:\Users\jonfe\Documents\MasterThesis\nnunet\models
 
-(the raw and pre folders can be empty).
+Then, the "models" folder should contain the segmentation model inside of a folder called "Dataset_ACDC". The model that we used is not public and it belongs to the BCN-AIM Lab, so we can't provide it here (also because it is 3GB+ heavy). The raw and pre folders can remain empty.
 
 Finally, after having generated the "3DImagesPreFilter" folder in the "image_processing_and_tda" notebook,  run this in the terminal.
 The "cpu" can be changed to "gpu" or "cuda" if needed.
